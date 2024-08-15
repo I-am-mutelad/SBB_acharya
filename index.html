@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 জন্মদিনৰ ওলগ জনালোঁ আচাৰ্যা 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(50,50,50,1) 100%);
+            cursor: crosshair;
+            color: #fff;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        @keyframes background-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            animation: background-animation 30s ease-in-out infinite;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #content {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #bdayPerson {
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        #bdayPerson:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        #greeting {
+            margin-top: 20px;
+            opacity: 0;
+            animation: fade-in 2s ease-in-out forwards;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        #bdayFooter {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fade-in 2s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #FFD700;
+            text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700; }
+            50% { text-shadow: 0 0 40px #FF6347, 0 0 60px #FF6347, 0 0 80px #FF6347; }
+            100% { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700; }
+        }
+
+        #bdayPerson img {
+            border-radius: 20px;
+            border: 2px solid transparent;
+            animation: borderAnimation 10s infinite alternate;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+        }
+
+        @keyframes borderAnimation {
+            0% { border-color: rgb(255, 0, 0); }
+            25% { border-color: rgb(0, 255, 0); }
+            50% { border-color: rgb(0, 0, 255); }
+            75% { border-color: rgb(255, 255, 0); }
+            100% { border-color: rgb(255, 0, 255); }
+        }
+        #bdayFooter {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin: 10px 0;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 5em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            p {
+                font-size: 1em;
+                margin: 8px 0;
+            }
+
+            #bdayFooter {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            #bdayPerson img {
+                width: 80%;
+                height: auto;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            #bdayFooter {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>🪻 শুভ জন্মদিন 🪻</h1>
+        <canvas id="birthday"></canvas>
+        <div id="bdayPerson"><img src="bd.png" alt="Birthday Person" height="220" width="220"></div>
+        <div id="greeting">
+            <p>আপোনাৰ জন্মদিনৰ বিশেষ এই মুহূৰ্তত মই আপোনাক মোৰ অন্তৰৰ পৰা অসংখ্য শুভেচ্ছা জনাবলৈ ইচ্ছা কৰিছো। পৃথিৱীত বহুতো মানুহৰ লগত দেখা হয়, কিন্তু কিছু লোক এনেকুৱা থাকে যিসকলৰ চিন্তা আৰু পৰিচৰ্যায় আমাৰ জীৱনত গভীৰ প্ৰভাৱ পেলায়। আপুনি ঠিক সেইবোৰ লোকৰ ভিতৰত এজন যাৰ শিক্ষাই মোৰ জীৱনক কেৱল এখন পাঠশালাৰ পাঠৰে সীমাবদ্ধ কৰি ৰখা নাই, বৰঞ্চ জীৱন জীয়াবলৈ শিকাইছে। </p>
+
+               <p>যেতিয়া মই অতীতৰ কথাবোৰলৈ ঘূৰি চাওঁ, আপুনি শিকোৱা অনন্ত শিক্ষাবোৰ মনত পৰে। এই শিক্ষাবোৰেই মোক আজিৰে পৰা পৰ্যন্ত সহায় কৰিছে। আপোনাৰ প্ৰদান কৰা সৰু-বড় সকলো শিক্ষাই মোৰ ব্যক্তিত্ব গঢ়িবলৈ সহায় কৰিছে। আপুনি মোৰ বাবে এক অসীম প্ৰেৰণা আৰু আপোনাৰ নোহোৱাত মই কোনোদিনো আজিৰ অৱস্থালৈ পৰিপক্ক নহ’লোহেঁতেন।</p>
+               
+                <p>আপোনাৰ মৰম সদায় মোৰ সঙ্গী হৈ থাকিব। আপুনি যিকোনো কঠিন সময়ত মোক সহায় কৰিলে, যিকোনো ভূলৰ বাবে মোক শুদ্ধ কৰিবলৈ সুযোগ দিলে। আপুনি মোৰ বাবে কেৱল এগৰাকীশিক্ষয়িত্ৰী নহয়, আপুনি এগৰাকী পথ প্ৰদৰ্শক, এগৰাকী  উপদেষ্টা আৰু এজন সোঁহাতৰ বান্ধৱী। </p>
+               
+               <p>আজিৰ এই বিশেষ দিনটোত মই কামনা কৰিছো আপোনাৰ জীৱন সদায় সুখে ভৰপূৰ থাকক। আপুনি সদায় এনেকৈয়ে হাঁহি-খুশী হৈ থাকক আৰু জীৱনৰ সকলো কঠিন পৰিস্থিতি আপোনাৰ ধৈৰ্য আৰু বুদ্ধিৰে পাৰ কৰি যাউক। আপোনাৰ কঠোৰ পৰিশ্ৰম আৰু মনোবলৰ পৰিণাম সদায় লাভান্বিত হওক আৰু আপুনি যি পৰিমাণ আশা ৰাখিছে সেইবোৰেই পূৰ্ণ হোৱাটো যথাযথ। </p>
+               
+               <p>আচাৰ্যা, আপুনি কেৱল মোৰ বাবে নহয়, আন সকলো শিক্ষাৰ্থীৰ বাবে এক প্ৰেৰণা। আপোনাৰ শিক্ষাই আমাৰ ভিতৰত কেৱল এটা ভাল শিক্ষাৰ্থীৰ গঢ় নহয়, এটি উত্তম মানুহ হিচাপে পৰিণত হ’বলৈ অনুপ্ৰাণিত কৰিছে। আপোনাৰ দৰে আমিও যদি কাকো জীৱনত এক ইতিবাচক পৰিৱৰ্তন অনাবলৈ সক্ষম হওঁ, তেন্তে আমাৰ জীৱনটো সাৰ্থক হ’ব। </p>
+               
+              <p> আপোনাৰ সৈতে কটোৱা প্ৰতিটো মুহূৰ্ত মই অন্তৰৰ পৰা সাঁচি ৰাখিছো। আপোনাৰ দিয়া প্ৰতিটো পৰামৰ্শ আৰু শিক্ষা মোৰ জীৱনত গভীৰ প্ৰভাৱ পেলাইছে। আপুনি সদায় মোৰ হৃদয়ৰ ওচৰত থাকিব। </p>
+               
+               <p>এই বিশেষ মুহূৰ্তত, মই আপোনাক আকৌ এবাৰ জন্মদিনৰ সজল শুভেচ্ছা জনাইছো। আপুনি সদায় সুখী হওক, স্বাস্থ্যবান থাকক আৰু এনেকৈয়ে আপোনাৰ শিক্ষাৰ্থী সকলক পথ প্ৰদৰ্শন কৰি থাকক। আপোনাৰ জীৱনটো সুখৰ ভঁৰালৰ দৰে ভৰপূৰ থাকক আৰু প্ৰতিটো দিন নতুন আশা আৰু উদ্যমৰ লগেৰে পৰিপূৰ্ণ হৈ থাকক। </p>
+               
+               <p>ধন্যবাদ, আচাৰ্যা, পৃথিৱীখনৰ উন্নতিত আপোনাৰ বৰঙনি আগবঢ়াবলৈ। আপোনাক পোৱাত মই নিজক ভাগ্যৱান বুলিহে অনুভৱ কৰিছো। আপুনি মোৰ জীৱনৰ এক অমূল্য অংশ আৰু আপোনাৰ অবিহনে মোৰ শিক্ষা অপূৰ্ণ হৈ থাকিলহেঁতেন। </p>
+               
+                <p>আপোনাৰ দিনটোক আপোনাৰ দৰে বিশেষ হৈ থাকক। 🎉🌹</p>
+               <p>।।শুভ জন্মদিন।।</p>
+               </p>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div id="bdayFooter">
+        <p>Crafted with heartfelt ❤️ wishes for you by Mutelad! 🎈🎁🎊</p>
+    </div>
+
+    <audio autoplay loop controls style="display: none;">
+        <source src="shot.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <script>
+        const PI2 = Math.PI * 2;
+        const random = (min, max) => Math.random() * (max - min + 1) + min | 0;
+        const timestamp = () => new Date().getTime();
+
+        class Birthday {
+            constructor() {
+                this.resize();
+                this.fireworks = [];
+                this.counter = 0;
+            }
+
+            resize() {
+                this.width = canvas.width = window.innerWidth;
+                this.height = canvas.height = window.innerHeight;
+                this.spawnA = this.width / 4;
+                this.spawnB = this.width / 1.5;
+                this.spawnC = this.height * 0.1;
+                this.spawnD = this.height * 0.5;
+            }
+
+            onClick(evt) {
+                const x = evt.clientX || evt.touches && evt.touches[0].pageX;
+                const y = evt.clientY || evt.touches && evt.touches[0].pageY;
+                const count = random(3, 5);
+
+                for (let i = 0; i < count; i++) {
+                    this.fireworks.push(new Firework(
+                        random(this.spawnA, this.spawnB),
+                        this.height,
+                        x,
+                        y,
+                        random(0, 260),
+                        random(30, 110)));
+                }
+
+                this.counter = -1;
+            }
+
+            update(delta) {
+                ctx.globalAlpha = 0.1;
+                ctx.fillStyle = "#000";
+                ctx.fillRect(0, 0, this.width, this.height);
+
+                ctx.globalAlpha = 1;
+
+                for (let firework of this.fireworks) firework.update(delta);
+
+                this.counter += delta * 3;
+                if (this.counter >= 1) {
+                    this.fireworks.push(new Firework(
+                        random(this.spawnA, this.spawnB),
+                        this.height,
+                        random(0, this.width),
+                        random(this.spawnC, this.spawnD),
+                        random(0, 360),
+                        random(30, 110)));
+                    this.counter = 0;
+                }
+
+                if (this.fireworks.length > 1000) this.fireworks = this.fireworks.filter(firework => !firework.dead);
+            }
+        }
+
+        class Firework {
+            constructor(x, y, targetX, targetY, shade, offsprings) {
+                this.dead = false;
+                this.offsprings = offsprings;
+
+                this.x = x;
+                this.y = y;
+                this.targetX = targetX;
+                this.targetY = targetY;
+
+                this.shade = shade;
+                this.history = [];
+            }
+
+            update(delta) {
+                if (this.dead) return;
+
+                const xDiff = this.targetX - this.x;
+                const yDiff = this.targetY - this.y;
+                if (Math.abs(xDiff) > 3 || Math.abs(yDiff) > 3) {
+                    this.x += xDiff * 2 * delta;
+                    this.y += yDiff * 2 * delta;
+
+                    this.history.push({
+                        x: this.x,
+                        y: this.y
+                    });
+
+                    if (this.history.length > 20) this.history.shift();
+                } else {
+                    if (this.offsprings && !this.madeChilds) {
+                        const babies = this.offsprings / 2;
+                        for (let i = 0; i < babies; i++) {
+                            const targetX = this.x + this.offsprings * Math.cos(PI2 * i / babies) | 0;
+                            const targetY = this.y + this.offsprings * Math.sin(PI2 * i / babies) | 0;
+
+                            birthday.fireworks.push(new Firework(this.x, this.y, targetX, targetY, this.shade, 0));
+                        }
+                    }
+                    this.madeChilds = true;
+                    this.history.shift();
+                }
+
+                if (this.history.length === 0) this.dead = true;
+                else if (this.offsprings) {
+                    for (let i = 0; this.history.length > i; i++) {
+                        const point = this.history[i];
+                        ctx.beginPath();
+                        ctx.fillStyle = 'hsl(' + this.shade + ',100%,' + i + '%)';
+                        ctx.arc(point.x, point.y, 1, 0, PI2, false);
+                        ctx.fill();
+                    }
+                } else {
+                    ctx.beginPath();
+                    ctx.fillStyle = 'hsl(' + this.shade + ',100%,50%)';
+                    ctx.arc(this.x, this.y, 1, 0, PI2, false);
+                    ctx.fill();
+                }
+            }
+        }
+
+        const canvas = document.getElementById('birthday');
+        const ctx = canvas.getContext('2d');
+
+        let then = timestamp();
+
+        const birthday = new Birthday;
+        window.onresize = () => birthday.resize();
+        document.onclick = evt => birthday.onClick(evt);
+        document.ontouchstart = evt => birthday.onClick(evt);
+
+        (function loop() {
+            requestAnimationFrame(loop);
+
+            const now = timestamp();
+            const delta = now - then;
+
+            then = now;
+            birthday.update(delta / 1000);
+        })();
+    </script>
+</body>
+</html>
